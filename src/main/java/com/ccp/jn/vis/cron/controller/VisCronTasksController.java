@@ -10,9 +10,8 @@ import com.ccp.implementations.file.bucket.gcp.CcpGcpFileBucket;
 import com.ccp.implementations.http.apache.mime.CcpApacheMimeHttp;
 import com.ccp.implementations.instant.messenger.telegram.CcpTelegramInstantMessenger;
 import com.ccp.implementations.json.gson.CcpGsonJsonHandler;
-import com.ccp.jn.async.business.support.JnAsyncBusinessNotifyError;
+import com.ccp.jn.commons.business.JnAsyncBusinessNotifyError;
 import com.ccp.jn.cron.controller.CcpCronTasksController;
-import com.ccp.vis.async.business.factory.CcpVisAsyncBusinessFactory;
 
 public class VisCronTasksController {
 	public static void main(String[] args) throws Exception {
@@ -20,7 +19,6 @@ public class VisCronTasksController {
 		(
 				new CcpElasticSearchQueryExecutor(),
 				new CcpTelegramInstantMessenger(),
-				new CcpVisAsyncBusinessFactory(),
 				new CcpElasticSearchDbRequest(),
 				new CcpSendGridEmailSender(),
 				new CcpElasticSerchDbBulk(),
