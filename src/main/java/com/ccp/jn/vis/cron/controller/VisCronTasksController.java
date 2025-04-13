@@ -10,8 +10,8 @@ import com.ccp.implementations.file.bucket.gcp.CcpGcpFileBucket;
 import com.ccp.implementations.http.apache.mime.CcpApacheMimeHttp;
 import com.ccp.implementations.instant.messenger.telegram.CcpTelegramInstantMessenger;
 import com.ccp.implementations.json.gson.CcpGsonJsonHandler;
-import com.ccp.jn.commons.business.JnAsyncBusinessNotifyError;
 import com.ccp.jn.cron.controller.CcpCronTasksController;
+import com.jn.business.JnBusinessNotifyError;
 
 public class VisCronTasksController {
 	public static void main(String[] args) throws Exception {
@@ -30,6 +30,6 @@ public class VisCronTasksController {
 		
 		String parameters = args[1];
 		String taskName = args[0];
-		CcpCronTasksController.main(JnAsyncBusinessNotifyError.INSTANCE, taskName, parameters);
+		CcpCronTasksController.main(JnBusinessNotifyError.INSTANCE, taskName, parameters);
 	}
 }
